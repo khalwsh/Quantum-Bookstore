@@ -131,3 +131,10 @@ The output will be printed to the console, detailing the execution of each test 
 ![image](https://github.com/user-attachments/assets/e398aa6d-a69d-4a0c-bc0b-2c85e282410f)
 
 
+
+8. Test Get Not found book , Buy not saleable book
+
+
+
+![image](https://github.com/user-attachments/assets/597bdde0-d8e3-44b3-a5c0-5c468fcd6d8b)
+
