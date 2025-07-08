@@ -1,5 +1,4 @@
 # Quantum Bookstore Application
-
 This project implements a simple command-line based bookstore application in Java, demonstrating basic object-oriented principles, inheritance, interfaces, and transaction handling for different types of books.
 
 ## Features
