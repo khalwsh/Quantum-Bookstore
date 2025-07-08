@@ -27,6 +27,8 @@ The Quantum Bookstore application provides the following core functionalities:
     * applying SRP (no class have more than 1 reason to change)
     * applying Open/close (classes are open for extension and closed for modifyication)
     * applying Liskov substitution principle
+    * applying Interface segregation principle
+         * you can notice the book interfaces
 ## Project Structure
 
 The project is organized into several packages to maintain modularity and separation of concerns:
