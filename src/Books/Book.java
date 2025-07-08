@@ -1,10 +1,7 @@
 package Books;
-
-
 import java.util.Date;
 
 public class Book extends Product {
-
     private final String isbn;
     private final String title;
     private final double price;

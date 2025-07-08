@@ -1,6 +1,7 @@
 package BookStore;
-
+import Books.EBook;
 import Books.Interfaces.CanSaleProduct;
+import Books.PaperBook;
 import Books.Product;
 import DeliveryService.Interfaces.DeliveryInfo;
 import TransactionHandler.Interfaces.TransactionHandler;
@@ -9,22 +10,25 @@ import Utilities.TransactionHandlerFactor;
 import java.util.*;
 
 public class BookStore {
+    // why not hashmap , I did that to handle multiple product of same product , also good for being extendable as I am not bound to key of certain type
     List<Product>  inventory;
+
     public BookStore(){
         inventory = new ArrayList<Product>();
     }
+
     public void addBook(Product book) {
         inventory.add(book);
         System.out.println("Quantum book store: Added book: " + book.getTitle() + " (" + book.getId() + ")");
     }
+
     public Product getBook(String isbn) {
-        for (Product book : inventory) {
-            if (book.getId().equals(isbn)) {
-                return book;
-            }
-        }
-        return null;
+        return inventory.stream()
+                .filter(book -> book.getId().equals(isbn))
+                .findFirst()
+                .orElse(null);
     }
+
     public double buyBook(String isbn, int quantity, DeliveryInfo customerInfo) {
         Product book = getBook(isbn);
         if (book == null) {
@@ -35,9 +39,9 @@ public class BookStore {
 
         // Now we can buy the item
         TransactionHandler handler = TransactionHandlerFactor.createHandler(book);
-
         return handler.handleTransaction(book , quantity, customerInfo);
     }
+
     public List<Product> removeAndReturnOutDatedBooks(int yearsGap) {
         List<Product> res = new ArrayList<>();
         Iterator<Product> iterator = inventory.iterator();

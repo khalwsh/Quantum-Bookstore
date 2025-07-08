@@ -1,5 +1,4 @@
 package Books;
-
 import java.util.Date;
 
 public class ShowCaseBook extends Book{

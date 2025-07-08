@@ -7,7 +7,7 @@ import DeliveryService.ShippingService;
 import TransactionHandler.Interfaces.TransactionHandler;
 
 public class PaperBookTransactionHandler implements TransactionHandler {
-    private ShippingService shippingService;
+    private final ShippingService shippingService;
 
     public PaperBookTransactionHandler(ShippingService shippingService) {
         this.shippingService = shippingService;
@@ -15,11 +15,9 @@ public class PaperBookTransactionHandler implements TransactionHandler {
 
     @Override
     public double handleTransaction(Product product, int quantity, DeliveryInfo customerInfo) {
-        if (!(product instanceof PaperBook)) {
+        if (!(product instanceof PaperBook paperBook)) {
             throw new IllegalArgumentException("Quantum book store : Expected Paper Book product");
         }
-
-        PaperBook paperBook = (PaperBook) product;
 
         if (!paperBook.canSaleProduct()) {
             throw new IllegalStateException("Quantum book store : Book is not for sale: " + paperBook.getTitle());

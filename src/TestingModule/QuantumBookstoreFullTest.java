@@ -6,6 +6,7 @@ import Books.PaperBook;
 import Books.Product;
 import Books.ShowCaseBook;
 import DeliveryService.EmailInfo;
+import DeliveryService.Interfaces.DeliveryInfo;
 import DeliveryService.ShippingInfo;
 
 import java.util.Calendar;
@@ -238,7 +239,17 @@ public class QuantumBookstoreFullTest {
             System.out.println("Quantum book store: testGetBookNotFound FAILED. Book found when it should not be.");
         }
     }
-
+    static public void testBuyShowcaseBookShouldFail() {
+        setUp();
+        bookStore.addBook(new ShowCaseBook("978-0123456789", "Art of War", 2 , new Date() , "author"));
+        DeliveryInfo customerInfo = new ShippingInfo("address");
+        try {
+            bookStore.buyBook("978-0123456789", 1, customerInfo);
+            System.out.println("Quantum book store: testBuyShowcaseBookShouldFail FAILED");
+        }catch (IllegalArgumentException e) {
+            System.out.println("Quantum book store: testBuyShowcaseBookShouldFail completed successfully " + e.getMessage());
+        }
+    }
     static public void runAllTests() {
         System.out.println("Quantum book store: Starting all tests...");
         testAddBook();
@@ -250,6 +261,7 @@ public class QuantumBookstoreFullTest {
         testRemoveAndReturnOutDatedBooks();
         testDecreaseAndIncreaseStock();
         testGetBookNotFound();
+        testBuyShowcaseBookShouldFail();
         System.out.println("Quantum book store: All tests finished.");
     }
 }

@@ -7,7 +7,7 @@ import DeliveryService.Interfaces.DeliveryInfo;
 import TransactionHandler.Interfaces.TransactionHandler;
 
 public class EBookTransactionHandler implements TransactionHandler {
-    private EmailService emailService;
+    private final EmailService emailService;
 
     public EBookTransactionHandler(EmailService emailService) {
         this.emailService = emailService;
@@ -15,11 +15,9 @@ public class EBookTransactionHandler implements TransactionHandler {
 
     @Override
     public double handleTransaction(Product product, int quantity, DeliveryInfo customerInfo) {
-        if (!(product instanceof EBook)) {
+        if (!(product instanceof EBook eBook)) {
             throw new IllegalArgumentException("Quantum book store : Expected EBook product");
         }
-
-        EBook eBook = (EBook) product;
 
         if (!eBook.canSaleProduct()) {
             throw new IllegalStateException("Quantum book store : Book is not for sale: " + eBook.getTitle());

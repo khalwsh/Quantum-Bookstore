@@ -1,12 +1,9 @@
 package Books;
-
 import Books.Interfaces.CanSaleProduct;
 import Books.Interfaces.CanShipProduct;
-
 import java.util.Date;
 
 public class PaperBook extends Book implements CanShipProduct, CanSaleProduct {
-
     private int stock;
     public PaperBook(String isbn, String title, double price, Date publishDate, int stock , String author) {
         super(isbn, title, price, publishDate , author);
