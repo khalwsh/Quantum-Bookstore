@@ -262,6 +262,6 @@ public class Tester {
         testDecreaseAndIncreaseStock();
         testGetBookNotFound();
         testBuyShowcaseBookShouldFail();
-        System.out.println("All tests finished.");
+        System.out.println("All tests passed.");
     }
 }

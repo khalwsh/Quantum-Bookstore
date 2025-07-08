@@ -1,7 +1,5 @@
 package BookStore;
-import Books.EBook;
 import Books.Interfaces.CanSaleProduct;
-import Books.PaperBook;
 import Books.Product;
 import DeliveryService.Interfaces.DeliveryInfo;
 import TransactionHandler.Interfaces.TransactionHandler;

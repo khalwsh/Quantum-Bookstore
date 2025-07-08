@@ -6,7 +6,6 @@ import DeliveryService.Interfaces.DeliveryInfo;
 import DeliveryService.Interfaces.DeliveryService;
 
 public class EmailService implements DeliveryService {
-
     @Override
     public void deliver(Product product, int quantity, DeliveryInfo deliveryInfo) {
         if(!(product instanceof EBook book) || !(deliveryInfo instanceof EmailInfo emailInfo)) {
