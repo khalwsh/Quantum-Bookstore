@@ -28,7 +28,7 @@ The Quantum Bookstore application provides the following core functionalities:
     * applying Open/close (classes are open for extension and closed for modifyication)
     * applying Liskov substitution principle
     * applying Interface segregation principle
-         * you can notice the book interfaces
+         * you can notice the book interfaces , seperate features that can be not supported in certain types in the hierarchy
 ## Project Structure
 
 The project is organized into several packages to maintain modularity and separation of concerns:
