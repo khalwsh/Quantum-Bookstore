@@ -25,9 +25,9 @@ public class PaperBookTransactionHandler implements TransactionHandler {
             throw new IllegalStateException("Quantum book store : Book is not for sale: " + paperBook.getTitle());
         }
 
+        ((PaperBook) product).decreaseStock(quantity); // decrease the product quantity as already it is shipping and this is physical product
         double totalPrice = paperBook.getPrice() * quantity;
         shippingService.deliver(paperBook, quantity, customerInfo);
-        ((PaperBook) product).decreaseStock(quantity); // decrease the product quantity as already it is shipping and this is physical product
         return totalPrice;
     }
 }
