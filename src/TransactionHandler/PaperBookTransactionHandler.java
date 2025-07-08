@@ -1,4 +1,32 @@
 package TransactionHandler;
 
-public class PaperBookTransactionHandler {
+import Books.PaperBook;
+import Books.Product;
+import DeliveryService.Interfaces.DeliveryInfo;
+import DeliveryService.ShippingService;
+import TransactionHandler.Interfaces.TransactionHandler;
+
+public class PaperBookTransactionHandler implements TransactionHandler {
+    private ShippingService shippingService;
+
+    public PaperBookTransactionHandler(ShippingService shippingService) {
+        this.shippingService = shippingService;
+    }
+
+    @Override
+    public double handleTransaction(Product product, int quantity, DeliveryInfo customerInfo) {
+        if (!(product instanceof PaperBook)) {
+            throw new IllegalArgumentException("Quantum book store : Expected Paper Book product");
+        }
+
+        PaperBook paperBook = (PaperBook) product;
+
+        if (!paperBook.canSaleProduct()) {
+            throw new IllegalStateException("Quantum book store : Book is not for sale: " + paperBook.getTitle());
+        }
+
+        double totalPrice = paperBook.getPrice() * quantity;
+        shippingService.deliver(paperBook, quantity, customerInfo);
+        return totalPrice;
+    }
 }
