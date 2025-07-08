@@ -79,3 +79,5 @@ To compile and run this project:
     ```
 
 The output will be printed to the console, detailing the execution of each test case and its outcome.
+
+## Running app
