@@ -251,17 +251,26 @@ public class Tester {
         }
     }
     static public void runAllTests() {
-        System.out.println("Starting all tests...");
+        System.out.println("==================================Starting all tests==================================");
         testAddBook();
+        System.out.println("======================================================================================");
         testBuyPaperBookSuccessfully();
+        System.out.println("======================================================================================");
         testBuyEBookSuccessfully();
+        System.out.println("======================================================================================");
         testBuyBookInsufficientStock();
+        System.out.println("======================================================================================");
         testBuyNonExistentBook();
+        System.out.println("======================================================================================");
         testBuyShowCaseBook();
+        System.out.println("======================================================================================");
         testRemoveAndReturnOutDatedBooks();
+        System.out.println("======================================================================================");
         testDecreaseAndIncreaseStock();
+        System.out.println("======================================================================================");
         testGetBookNotFound();
+        System.out.println("======================================================================================");
         testBuyShowcaseBookShouldFail();
-        System.out.println("All tests passed.");
+        System.out.println("==================================All tests passed.==================================");
     }
 }
