@@ -23,6 +23,8 @@ The Quantum Bookstore application provides the following core functionalities:
     * **Shipping:** For physical books, a `ShippingService` is simulated.
     * **Email Delivery:** For e-books, an `EmailService` is simulated.
 
+* **Applying SOLID Princples**
+    * applying SRP (no class have more than 1 reason to change)
 ## Project Structure
 
 The project is organized into several packages to maintain modularity and separation of concerns:
