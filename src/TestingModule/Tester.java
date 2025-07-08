@@ -13,14 +13,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class QuantumBookstoreFullTest {
+public class Tester {
 
     static private BookStore bookStore;
 
     // set up the test environment before each test
     static private void setUp() {
         bookStore = new BookStore();
-        System.out.println(" Setting up new test scenario.");
+        System.out.println("Setting up new test scenario.");
     }
 
     static public void testAddBook() {
