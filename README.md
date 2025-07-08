@@ -29,6 +29,7 @@ The Quantum Bookstore application provides the following core functionalities:
     * applying Liskov substitution principle
     * applying Interface segregation principle
          * you can notice the book interfaces , seperate features that can be not supported in certain types in the hierarchy
+    * applying Depency inversion Principle
 ## Project Structure
 
 The project is organized into several packages to maintain modularity and separation of concerns:
