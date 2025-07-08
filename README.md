@@ -51,7 +51,7 @@ The project is organized into several packages to maintain modularity and separa
 │       ├── DeliveryInfo.java      # Interface for all delivery information types
 │       └── DeliveryService.java   # Interface for all delivery services
 ├── TestingModule
-│   └── QuantumBookstoreTestRunner.java # Class to run all custom tests
+│   └── Tester.java # Class to run all custom tests
 ├── TransactionHandler
 │   ├── EmailTransactionHandler.java # Handles transactions for EBooks
 │   ├── PaperBookTransactionHandler.java # Handles transactions for PaperBooks
