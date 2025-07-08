@@ -1,5 +1,8 @@
 package Books.Interfaces;
 
-public interface CanSaleProduct {
 
+
+
+public interface CanSaleProduct {
+    boolean canSaleProduct();
 }
