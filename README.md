@@ -81,3 +81,5 @@ To compile and run this project:
 The output will be printed to the console, detailing the execution of each test case and its outcome.
 
 ## Running app
+Testing adding book
+![image](https://github.com/user-attachments/assets/141cebe4-fdc4-4046-9766-1b30b4ab2169)
