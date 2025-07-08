@@ -116,3 +116,18 @@ The output will be printed to the console, detailing the execution of each test 
 
 ![image](https://github.com/user-attachments/assets/fe727e50-ae56-4847-aca3-346b569d1ec5)
 
+
+
+6. Test remove and return out dated products
+
+
+![image](https://github.com/user-attachments/assets/68b58fda-49ca-4e76-9fc2-0146d73b6b8e)
+
+
+
+7. Test decrease and increase stock
+
+
+![image](https://github.com/user-attachments/assets/e398aa6d-a69d-4a0c-bc0b-2c85e282410f)
+
+
