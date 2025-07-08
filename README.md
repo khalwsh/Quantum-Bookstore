@@ -85,3 +85,12 @@ The output will be printed to the console, detailing the execution of each test 
 
 
 ![image](https://github.com/user-attachments/assets/141cebe4-fdc4-4046-9766-1b30b4ab2169)
+
+
+
+2.Testing buy paper book
+
+
+
+![image](https://github.com/user-attachments/assets/6598517f-89ce-44cd-bb0b-8cb6ec760a91)
+
