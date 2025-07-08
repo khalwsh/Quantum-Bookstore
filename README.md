@@ -94,3 +94,11 @@ The output will be printed to the console, detailing the execution of each test 
 
 ![image](https://github.com/user-attachments/assets/6598517f-89ce-44cd-bb0b-8cb6ec760a91)
 
+
+3. Testing buy Ebook
+
+
+![image](https://github.com/user-attachments/assets/47c1b26a-4aef-4fc7-b646-2a18eee72241)
+
+
+
