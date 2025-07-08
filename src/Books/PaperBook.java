@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class PaperBook extends Book implements CanShipProduct, CanSaleProduct {
     private int stock;
-    public PaperBook(String isbn, String title, double price, Date publishDate, int stock , String author) {
-        super(isbn, title, price, publishDate , author);
+    public PaperBook(String isbn, String title, double price, Date publishDate, int stock) {
+        super(isbn, title, price, publishDate);
         this.stock = stock;
     }
 
@@ -28,7 +28,7 @@ public class PaperBook extends Book implements CanShipProduct, CanSaleProduct {
         if (quantity <= stock) {
             stock -= quantity;
         }else
-            throw new IllegalArgumentException("Quantum book store: The requested quantity is greater than the stock you request " + quantity + " and in stock only " + stock);
+            throw new IllegalArgumentException("The requested quantity is greater than the stock you request " + quantity + " and in stock only " + stock);
     }
 
     public void increaseStock(int quantity) {

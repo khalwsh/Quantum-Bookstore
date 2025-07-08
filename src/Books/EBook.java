@@ -6,8 +6,8 @@ import java.util.Date;
 public class EBook extends Book implements CanEmailProduct, CanSaleProduct {
     private final String fileType;
 
-    public EBook(String isbn, String title, double price, Date publishDate , String fileType , String author) {
-        super(isbn, title, price, publishDate , author);
+    public EBook(String isbn, String title, double price, Date publishDate , String fileType) {
+        super(isbn, title, price, publishDate );
         this.fileType = fileType;
     }
 

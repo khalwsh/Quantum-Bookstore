@@ -10,10 +10,10 @@ public class EmailService implements DeliveryService {
     @Override
     public void deliver(Product product, int quantity, DeliveryInfo deliveryInfo) {
         if(!(product instanceof EBook book) || !(deliveryInfo instanceof EmailInfo emailInfo)) {
-            throw new IllegalArgumentException("Quantum book store : Invalid product type or Invalid delivery info for emailing");
+            throw new IllegalArgumentException("Invalid product type or Invalid delivery info for emailing");
         }
         System.out.printf(
-                "Quantum Book Store: Sending \"%s\" (File Type: %s) to email: %s%n",
+                "Sending \"%s\" (File Type: %s) to email: %s%n",
                 book.getTitle(),
                 book.getFileType(),
                 emailInfo.getEmail()

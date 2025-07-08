@@ -6,14 +6,11 @@ public class Book extends Product {
     private final String title;
     private final double price;
     private final Date publishDate;
-    private final String author;
-
-    public Book(String isbn, String title, double price, Date publishDate , String author) {
+    public Book(String isbn, String title, double price, Date publishDate ) {
         this.isbn = isbn;
         this.title = title;
         this.price = price;
         this.publishDate = publishDate;
-        this.author = author;
     }
     @Override
     public String getTitle() {
@@ -35,7 +32,4 @@ public class Book extends Product {
         return isbn;
     }
 
-    public String getAuthor() {
-        return author;
-    }
 }

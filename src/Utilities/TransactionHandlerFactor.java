@@ -16,7 +16,7 @@ public class TransactionHandlerFactor {
         } else if (product instanceof EBook) {
             return new EBookTransactionHandler(new EmailService());
         } else {
-            throw new IllegalArgumentException("No purchase handler available for product type");
+            throw new IllegalArgumentException("No Transaction handler available for product type");
         }
     }
 }

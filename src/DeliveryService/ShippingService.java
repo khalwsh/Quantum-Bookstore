@@ -10,10 +10,10 @@ public class ShippingService implements DeliveryService {
     @Override
     public void deliver(Product product, int quantity, DeliveryInfo deliveryInfo) {
         if(!(product instanceof PaperBook book) || !(deliveryInfo instanceof ShippingInfo shippingInfo)) {
-            throw new IllegalArgumentException("Quantum book store : Invalid product type or Invalid delivery info for shipping");
+            throw new IllegalArgumentException("Invalid product type or Invalid delivery info for shipping");
         }
         System.out.printf(
-                "Quantum Book Store: Sending \"%s\" (quantity: %d) to address: %s%n",
+                "Sending \"%s\" (quantity: %d) to address: %s%n",
                 book.getTitle(),
                 quantity,
                 shippingInfo.getAddress()

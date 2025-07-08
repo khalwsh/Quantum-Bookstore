@@ -19,7 +19,7 @@ public class BookStore {
 
     public void addBook(Product book) {
         inventory.add(book);
-        System.out.println("Quantum book store: Added book: " + book.getTitle() + " (" + book.getId() + ")");
+        System.out.println("Added book: " + book.getTitle() + " (" + book.getId() + ")");
     }
 
     public Product getBook(String isbn) {
@@ -32,10 +32,10 @@ public class BookStore {
     public double buyBook(String isbn, int quantity, DeliveryInfo customerInfo) {
         Product book = getBook(isbn);
         if (book == null) {
-            throw new IllegalArgumentException("Quantum book store: book not exist");
+            throw new IllegalArgumentException("book not exist");
         }
-        if(!(book instanceof CanSaleProduct)) throw new IllegalArgumentException("Quantum book store: book is not saleable");
-        if(! ((CanSaleProduct)book).canSaleProduct()) throw new IllegalArgumentException("Quantum book store: book is not saleable");
+        if(!(book instanceof CanSaleProduct)) throw new IllegalArgumentException("book is not saleable");
+        if(! ((CanSaleProduct)book).canSaleProduct()) throw new IllegalArgumentException("book is not saleable");
 
         // Now we can buy the item
         TransactionHandler handler = TransactionHandlerFactor.createHandler(book);

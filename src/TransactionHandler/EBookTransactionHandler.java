@@ -16,11 +16,11 @@ public class EBookTransactionHandler implements TransactionHandler {
     @Override
     public double handleTransaction(Product product, int quantity, DeliveryInfo customerInfo) {
         if (!(product instanceof EBook eBook)) {
-            throw new IllegalArgumentException("Quantum book store : Expected EBook product");
+            throw new IllegalArgumentException("Expected EBook product");
         }
 
         if (!eBook.canSaleProduct()) {
-            throw new IllegalStateException("Quantum book store : Book is not for sale: " + eBook.getTitle());
+            throw new IllegalStateException("Book is not for sale: " + eBook.getTitle());
         }
 
         double totalPrice = eBook.getPrice() * quantity;

@@ -16,11 +16,11 @@ public class PaperBookTransactionHandler implements TransactionHandler {
     @Override
     public double handleTransaction(Product product, int quantity, DeliveryInfo customerInfo) {
         if (!(product instanceof PaperBook paperBook)) {
-            throw new IllegalArgumentException("Quantum book store : Expected Paper Book product");
+            throw new IllegalArgumentException("Expected Paper Book product");
         }
 
         if (!paperBook.canSaleProduct()) {
-            throw new IllegalStateException("Quantum book store : Book is not for sale: " + paperBook.getTitle());
+            throw new IllegalStateException("Book is not for sale: " + paperBook.getTitle());
         }
 
         ((PaperBook) product).decreaseStock(quantity); // decrease the product quantity as already it is shipping and this is physical product
