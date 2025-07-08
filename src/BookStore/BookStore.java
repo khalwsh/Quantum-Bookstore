@@ -10,7 +10,7 @@ import java.util.*;
 
 public class BookStore {
     List<Product>  inventory;
-    BookStore(){
+    public BookStore(){
         inventory = new ArrayList<Product>();
     }
     public void addBook(Product book) {
@@ -27,7 +27,7 @@ public class BookStore {
     }
     public double buyBook(String isbn, int quantity, DeliveryInfo customerInfo) {
         Product book = getBook(isbn);
-        if (book != null) {
+        if (book == null) {
             throw new IllegalArgumentException("Quantum book store: book not exist");
         }
         if(!(book instanceof CanSaleProduct)) throw new IllegalArgumentException("Quantum book store: book is not saleable");
@@ -35,6 +35,7 @@ public class BookStore {
 
         // Now we can buy the item
         TransactionHandler handler = TransactionHandlerFactor.createHandler(book);
+
         return handler.handleTransaction(book , quantity, customerInfo);
     }
     public List<Product> removeAndReturnOutDatedBooks(int yearsGap) {

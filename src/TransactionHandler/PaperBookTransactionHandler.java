@@ -27,6 +27,7 @@ public class PaperBookTransactionHandler implements TransactionHandler {
 
         double totalPrice = paperBook.getPrice() * quantity;
         shippingService.deliver(paperBook, quantity, customerInfo);
+        ((PaperBook) product).decreaseStock(quantity); // decrease the product quantity as already it is shipping and this is physical product
         return totalPrice;
     }
 }
