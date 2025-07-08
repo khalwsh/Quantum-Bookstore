@@ -146,3 +146,75 @@ The output will be printed to the console, detailing the execution of each test 
 
 ![image](https://github.com/user-attachments/assets/597bdde0-d8e3-44b3-a5c0-5c468fcd6d8b)
 
+
+
+## test cases output
+
+```bash
+==================================Starting all tests==================================
+
+Setting up new test scenario.
+Running testAddBook...
+Added book: The Lord of the Rings (978-0321765723)
+testAddBook completed successfully.
+
+======================================================================================
+Setting up new test scenario.
+Running testBuyPaperBookSuccessfully...
+Added book: The Hobbit (978-0321765723)
+Sending "The Hobbit" (quantity: 2) to address: 123 Main St, Anytown, USA
+testBuyPaperBookSuccessfully completed successfully. Remaining stock: 3
+
+======================================================================================
+Setting up new test scenario.
+Running testBuyEBookSuccessfully...
+Added book: Clean Code (978-1234567890)
+Sending "Clean Code" (File Type: PDF) to email: test@example.com
+testBuyEBookSuccessfully completed successfully.
+
+======================================================================================
+Setting up new test scenario.
+Running testBuyBookInsufficientStock...
+Added book: Dune (978-0553103546)
+testBuyBookInsufficientStock completed successfully. Stock remains: 1
+
+======================================================================================
+Setting up new test scenario.
+Running testBuyNonExistentBook...
+testBuyNonExistentBook completed successfully.
+
+======================================================================================
+Setting up new test scenario.
+Running testBuyShowCaseBook...
+Added book: Art of War (Showcase) (978-0123456789)
+testBuyShowCaseBook completed successfully.
+
+======================================================================================
+Setting up new test scenario.
+Running testRemoveAndReturnOutDatedBooks...
+Added book: Ancient History (OLD-001)
+Added book: Forgotten Lore (OLD-002)
+Added book: Modern Marvels (NEW-001)
+testRemoveAndReturnOutDatedBooks completed successfully. Removed books count: 2
+
+======================================================================================
+Setting up new test scenario.
+Running testDecreaseAndIncreaseStock...
+Added book: Stock Management Guide (STOCK-001)
+Stock decreased successfully to 7.
+Stock increased successfully to 12.
+testDecreaseAndIncreaseStock (insufficient decrease) completed successfully. Stock remains: 12
+testDecreaseAndIncreaseStock completed. Final stock: 12
+
+======================================================================================
+Setting up new test scenario.
+Running testGetBookNotFound...
+testGetBookNotFound completed successfully.
+
+======================================================================================
+Setting up new test scenario.
+Added book: Art of War (978-0123456789)
+testBuyShowcaseBookShouldFail completed successfully book is not saleable
+
+==================================All tests passed.==================================
+```
