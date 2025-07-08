@@ -29,7 +29,7 @@ The Quantum Bookstore application provides the following core functionalities:
 
 The project is organized into several packages to maintain modularity and separation of concerns:
 
-
+```
 .
 ├── BookStore
 │   └── BookStore.java             # Main class managing inventory and sales logic
@@ -59,7 +59,7 @@ The project is organized into several packages to maintain modularity and separa
 │       └── TransactionHandler.java # Interface for all transaction handlers
 └── Utilities
 └── TransactionHandlerFactor.java # Factory for creating appropriate transaction handlers
-
+```
 
 ## How to Run
 
