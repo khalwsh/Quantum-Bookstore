@@ -1,4 +1,4 @@
 package TestingModule;
 
-public class Tester {
+public class QuantumBookstoreFullTest {
 }

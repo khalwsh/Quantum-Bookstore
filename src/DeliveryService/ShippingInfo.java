@@ -1,4 +1,8 @@
 package DeliveryService;
 
-public class ShippingInfo {
+import DeliveryService.Interfaces.DeliveryInfo;
+
+
+public class ShippingInfo implements DeliveryInfo{
+
 }

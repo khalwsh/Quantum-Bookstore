@@ -1,4 +1,7 @@
 package DeliveryService;
 
-public class EmailInfo {
+import DeliveryService.Interfaces.DeliveryInfo;
+
+public class EmailInfo implements DeliveryInfo {
+
 }
